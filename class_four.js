@@ -56,3 +56,28 @@ console.log("Avarage number is: ", avg);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
