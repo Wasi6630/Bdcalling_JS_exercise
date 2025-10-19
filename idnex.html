@@ -6,68 +6,7 @@
     <title>JS Class Four</title>
 </head>
 <body>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>DocumentFragment + Tailwind Project</title>
-  <!-- ✅ Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100 min-h-screen flex flex-col items-center py-10 ">
-
-<script>
-  // ✅ DocumentFragment তৈরি
-  const fragment = document.createDocumentFragment();
-
-  // ✅ Title বানানো
-  const heading = document.createElement("h2");
-  heading.innerText = "Product List (Using DocumentFragment + Tailwind)";
-  heading.className = "text-2xl font-bold text-teal-600 mb-8";
-  fragment.appendChild(heading);
-
-  // ✅ ডাটা লিস্ট
-  const products = [
-    { name: "Laptop", price: 1200 },
-    { name: "Phone", price: 800 },
-    { name: "Tablet", price: 500 },
-    { name: "Headphone", price: 150 },
-  ];
-
-  // ✅ মূল container
-  const container = document.createElement("div");
-  container.className = "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4";
-
-  // ✅ প্রতিটি product এর জন্য কার্ড তৈরি
-  products.forEach(item => {
-    const card = document.createElement("div");
-    card.className = "bg-white shadow-lg rounded-xl p-5 hover:shadow-xl transition duration-200";
-
-    const title = document.createElement("h3");
-    title.textContent = item.name;
-    title.className = "text-lg font-semibold text-gray-800 mb-2";
-
-    const price = document.createElement("p");
-    price.innerText = "Price: $" + item.price;
-    price.className = "text-teal-600 font-medium";
-
-    // কার্ডে সবকিছু যোগ করা
-    card.appendChild(title);
-    card.appendChild(price);
-
-    // কন্টেইনারে কার্ড যোগ
-    container.appendChild(card);
-  });
-
-  // ✅ container কে fragment এ যোগ
-  fragment.appendChild(container);
-
-  // ✅ শেষে সবকিছু body তে যোগ
-  document.body.appendChild(fragment);
-</script>
-
-</body>
-</html>
-
+ 
     
     <!-- <script src="class_four.js"></script> -->
     <!-- <script src="class_five.js"></script> -->
